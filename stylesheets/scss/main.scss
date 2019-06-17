@@ -38,14 +38,24 @@ svg{
 *****************************************/
 header{
   display: flex;
+  height: 40vh;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  .logo{
-    padding: get-padding(8);
+  .logo-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: get-padding(8);
+
+
   }
 
   nav{
     border-top: 1px solid rgba(#333, 0.2);
+    margin-top: auto;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -57,7 +67,7 @@ header{
       list-style: none;
       display: flex;
       li{
-        background: pink;
+        background: white;
         padding: get-padding(2) get-padding(4);
         position: relative;
 
@@ -97,16 +107,170 @@ header{
           }
         }
 
-        // &.hovered{
-        //   a:not(:only-child):after {
-        //     transform: rotate(45deg);
-        //   }
-        //   ul{
-        //     display: block;
-        //   }
-        // }
 
       }
     }
+  }
+}
+
+
+.slider{
+  display: none;
+  height: 60vh;
+  background: #333;
+}
+
+.main-content{
+  display: flex;
+  padding: get-padding(2);
+
+  .section-header{
+    background: white;
+    border: 1px solid rgba(#000,0.2);
+    padding: get-padding(2);
+  }
+
+  .posts{
+    background: pink;
+    flex-basis: 70%;
+
+    .post{
+      background: white;
+      height: 200px;
+      display: flex;
+      margin: get-margin(2) 0;
+
+      .post-img{
+        height: 200px;
+        width: 300px;
+        flex-grow: 1;
+        flex-shrink: 0;
+      }
+      .post-data{
+        padding: get-padding(2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 0;
+
+        .post-title{
+          margin: get-padding(1) 0;
+        }
+        .post-meta{
+          list-style-type: none;
+          margin: get-margin(1) 0;
+        }
+
+      }
+    }
+    .pagination-container{
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      margin: get-margin(2) 0;
+      li{
+        padding: get-padding(1.2) get-padding(3);
+        background: white;
+        margin: 0 1px;
+      }
+    }
+
+  }
+  .sidebar{
+    //background: blue;
+    padding: get-padding(2);
+    flex-basis: 30%;
+
+    .search-box{
+      display: flex;
+      background: pink;
+      border-radius: 20px;
+      border: 1px solid rgba(#000, 0.2);
+      input{
+        padding: get-padding(1) get-padding(2);
+        border: none;
+        flex-grow: 1;
+        border-radius: 20px 0 0 20px;
+        &:focus{
+          outline: none;
+        }
+      }
+      .search-icon{
+        margin: auto get-margin(1);
+        padding: get-padding(1) ;
+      }
+    }
+    .about{
+      //background: pink;
+      margin: get-margin(4) 0;
+      display: flex;
+      padding-bottom: get-padding(3);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      background: pink;
+      &:before{
+        display: block;
+        content: "";
+        height: 200px;
+        background: red;
+        width: 100%;
+        position: absolute;
+        top: 0;
+      }
+
+      img{
+        margin-top: get-margin(8);
+        margin-bottom: get-margin(2);
+        border: 4px solid pink;
+        border-radius: 2px;
+        position: relative;
+        z-index: 1;
+      }
+
+        .name{
+          margin: get-margin(1) 0;
+        }
+        .detail{
+          margin: get-margin(1) 0;
+        }
+
+
+    }
+    .sidebar-post-container{
+      background: pink;
+      padding: get-padding(2) get-padding(1);
+
+      .sidebar-post-section-heading
+      {
+        margin: get-margin(2) 0;
+      }
+    }
+    .sidebar-post{
+      display: flex;
+      background: white;
+      margin: get-margin(1) 0;
+      .sidebar-post-img{
+        width: 90px;
+        height: 60px;
+      }
+      .sidebar-post-data{
+        padding: 0 get-margin(1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .sidebar-post-title{
+        font-size: 0.9em;
+      }
+      .sidebar-post-meta{
+        list-style: none;
+        font-size: 0.8em;
+      }
+    }
+
   }
 }
