@@ -1,3 +1,6 @@
+@import "../../vendor/owlcarousel/src/scss/owl.carousel";
+@import "../../vendor/owlcarousel/src/scss/owl.theme.default";
+
 @function get-padding($x){
   @return $x*8px;
 
@@ -38,7 +41,7 @@ svg{
 *****************************************/
 header{
   display: flex;
-  height: 40vh;
+  height: 30vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -54,8 +57,10 @@ header{
   }
 
   nav{
-    border-top: 1px solid rgba(#333, 0.2);
-    margin-top: auto;
+    border-top: 1px solid rgba(#333, 0.1);
+    border-bottom: 1px solid rgba(#333, 0.1);
+
+      margin-top: auto;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -89,6 +94,7 @@ header{
           min-width: 200px;
           display: none;
           position: absolute;
+            z-index: 2;
           top: 50px;
           left: 0;
 
@@ -115,9 +121,17 @@ header{
 
 
 .slider{
-  display: none;
-  height: 60vh;
+  //display: none;
+    width: 100vw;
+  //height: 20vh;
   background: #333;
+    margin-bottom: get-margin(4);
+    div{
+        img{
+            border: 2px solid white;
+            height: 300px;
+        }
+    }
 }
 
 .main-content{

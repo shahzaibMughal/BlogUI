@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
   <link rel="stylesheet" href="stylesheets/css/main.css">
+
   <title>Document</title>
 </head>
 <body>
@@ -34,8 +35,14 @@
       </ul>
     </nav>
   </header>
-  <section class="slider">
-
+  <section class="slider owl-carousel">
+    <div><img src="images/post_img.jpg" alt=""> </div>
+    <div><img src="images/post_img.jpg" alt=""> </div>
+    <div><img src="images/post_img.jpg" alt=""> </div>
+    <div><img src="images/post_img.jpg" alt=""> </div>
+    <div><img src="images/post_img.jpg" alt=""> </div>
+    <div><img src="images/post_img.jpg" alt=""> </div>
+    <div><img src="images/post_img.jpg" alt=""> </div>
   </section>
   <div class="main-content">
     <section class="posts">
@@ -147,6 +154,7 @@
 
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="vendor/owlcarousel/src/js/owl.carousel.js"></script>
   <script>
       $(document).ready(function(){
       //
@@ -170,10 +178,36 @@
             dropdown_navitem.removeClass('hovered');
 
 
-        })
-      //
-      //
-      //
+        });
+
+
+          var owl = $(".owl-carousel");
+          owl.owlCarousel({
+            items: 3,
+            loop: true,
+            autoplay: true,
+            autoPlaySpeed: 500,
+            autoPlayTimeout: 500,
+            autoplayHoverPause: true,
+            responsiveClass:true,
+            responsive:{
+              0:{
+                items:1,
+              },
+              600:{
+                items:2,
+              },
+              800:{
+                items:3,
+              },
+              1000:{
+                items :5,
+              }
+            }
+          });
+          owl.trigger('play.owl.autoPlay',[500]);
+
+
       });
   </script>
 </body>
