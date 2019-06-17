@@ -274,3 +274,13 @@ header{
 
   }
 }
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  padding: get-padding(2);
+  align-items: center;
+  .logo{
+    width: 150px;
+  }
+}

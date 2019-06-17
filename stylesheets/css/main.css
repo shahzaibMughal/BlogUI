@@ -179,4 +179,12 @@ header {
         list-style: none;
         font-size: 0.8em; }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center; }
+  footer .logo {
+    width: 150px; }
+
 /*# sourceMappingURL=main.css.map */
