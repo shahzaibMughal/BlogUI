@@ -1,7 +1,60 @@
 /******** Global styles
 *************************************/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif; }
+
 svg {
-  width: 30px;
-  height: 30px; }
+  width: 20px;
+  height: 20px; }
+
+/******** End of Global styles
+*******************************/
+/********* Header Styles
+*****************************************/
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  header .logo {
+    padding: 64px; }
+  header nav {
+    border-top: 1px solid rgba(51, 51, 51, 0.2);
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    header nav #nav-toggler {
+      display: none; }
+    header nav .main-nav {
+      list-style: none;
+      display: flex; }
+      header nav .main-nav li {
+        background: pink;
+        padding: 16px 32px;
+        position: relative; }
+        header nav .main-nav li a:not(:only-child):after {
+          margin: 0 8px;
+          content: "";
+          border: solid black;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg); }
+        header nav .main-nav li ul {
+          margin-left: 32px;
+          list-style: none;
+          min-width: 200px;
+          display: none;
+          position: absolute;
+          top: 50px;
+          left: 0; }
+          header nav .main-nav li ul:hover {
+            display: block; }
+        header nav .main-nav li.hovered a:not(:only-child):after {
+          transform: rotate(225deg); }
+        header nav .main-nav li.hovered ul {
+          display: block; }
 
 /*# sourceMappingURL=main.css.map */
