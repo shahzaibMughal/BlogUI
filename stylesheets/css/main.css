@@ -99,7 +99,12 @@ header {
           margin: 8px 0; }
         .main-content .posts .post .post-data .post-meta {
           list-style-type: none;
-          margin: 8px 0; }
+          margin: 8px 0;
+          display: flex; }
+          .main-content .posts .post .post-data .post-meta li {
+            margin: 0 8px;
+            color: #555;
+            font-size: 0.9em; }
     .main-content .posts .pagination-container {
       list-style-type: none;
       display: flex;
@@ -109,6 +114,49 @@ header {
         padding: 9.6px 24px;
         background: white;
         margin: 0 1px; }
+  .main-content .single-post {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0; }
+    .main-content .single-post .single-post-title {
+      font-size: 2em;
+      text-align: center; }
+    .main-content .single-post .single-post-meta {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 9.6px 0; }
+      .main-content .single-post .single-post-meta li {
+        margin: 0 16px; }
+    .main-content .single-post .single-post-img {
+      height: 350px;
+      margin: 16px 0; }
+    .main-content .single-post .sharing-btn {
+      display: flex;
+      justify-content: center;
+      margin: 32px 0; }
+      .main-content .single-post .sharing-btn button {
+        margin: 0 8px; }
+    .main-content .single-post .next-post {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 32px 0; }
+      .main-content .single-post .next-post:after {
+        margin: 0 8px;
+        content: "";
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg); }
+      .main-content .single-post .next-post .next-post-data {
+        padding: 16px; }
+      .main-content .single-post .next-post .next-post-img {
+        height: 80px;
+        width: 120px; }
+      .main-content .single-post .next-post .next-post-meta {
+        list-style: none; }
   .main-content .sidebar {
     padding: 16px;
     flex-basis: 30%; }

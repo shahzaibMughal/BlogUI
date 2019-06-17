@@ -159,6 +159,12 @@ header{
         .post-meta{
           list-style-type: none;
           margin: get-margin(1) 0;
+          display: flex;
+          li{
+            margin: 0 get-margin(1);
+            color: #555;
+            font-size: 0.9em;
+          }
         }
 
       }
@@ -172,6 +178,66 @@ header{
         padding: get-padding(1.2) get-padding(3);
         background: white;
         margin: 0 1px;
+      }
+    }
+
+  }
+
+  .single-post{
+    display: flex;
+    flex-direction: column;
+    margin: get-margin(2) 0;
+    .single-post-title{
+      font-size: 2em;
+      text-align: center;
+    }
+    .single-post-meta{
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: get-margin(1.2) 0;
+      li{
+        margin: 0 get-padding(2);
+      }
+    }
+    .single-post-img{
+      height: 350px;
+      margin: get-margin(2) 0;
+
+    }
+    .sharing-btn{
+      display: flex;
+      justify-content: center;
+      margin: get-margin(4) 0;
+      button{
+        margin: 0 get-margin(1);
+      }
+    }
+
+    .next-post{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: get-margin(4) 0;
+
+      &:after{
+        margin: 0 get-margin(1);
+        content: "";
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+      }
+      .next-post-data{
+        padding: get-padding(2);
+      }
+      .next-post-img{
+        height: 80px;
+        width: 120px;
+      }
+      .next-post-meta{
+        list-style: none;
       }
     }
 
